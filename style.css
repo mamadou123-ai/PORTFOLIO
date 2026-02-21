@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-/*erer*/
+
 body {
     background: #111;
     color: white;
@@ -86,7 +86,6 @@ body {
     color: white;
 }
 
-/* Conteneur texte + image */
 .hero-container{
     display: flex;
     align-items: center;
@@ -94,7 +93,6 @@ body {
     width: 80%;
 }
 
-/* Texte */
 .hero-content{
     width: 55%;
 }
@@ -110,7 +108,7 @@ body {
     opacity: 0.8;
 }
 
-/* Image */
+
 .hero-image{
     width: 40%;
     text-align: center;
@@ -124,7 +122,8 @@ body {
     border: 4px solid white;
 }
 
-/* Animation flottante */
+
+
 .hero-image img{
     animation: float 3s ease-in-out infinite;
 }
@@ -293,21 +292,19 @@ body {
 
 
 
-/* --- VARIABLES GLOBALES --- */
 :root {
     --neon-blue: #00d4ff;
     --neon-pink: #ff007a;
-    --deep-purple: #1a0b2e; /* Fond sombre inspiré de l'image */
+    --deep-purple: #1a0b2e; 
     --text-light: #f8f9fa;
     --glass-bg: rgba(255, 255, 255, 0.07);
     --glass-border: rgba(255, 255, 255, 0.12);
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* --- SECTION SKILLS --- */
 .skills-section {
     padding: 80px 10%;
-    /* Dégradé radial complexe pour refléter l'ambiance de l'image */
+    
     background: radial-gradient(circle at top right, #3d0b5e, transparent),
                 radial-gradient(circle at bottom left, #0b2e4d, transparent),
                 linear-gradient(135deg, var(--deep-purple) 0%, #0f051d 100%);
@@ -328,13 +325,13 @@ body {
 .underline {
     width: 80px;
     height: 4px;
-    /* Dégradé néon sur la barre */
     background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
     margin: 0 auto 50px;
     border-radius: 2px;
 }
 
-/* --- GROUPES --- */
+
+
 .skills-group {
     margin-bottom: 60px;
 }
@@ -349,7 +346,7 @@ body {
     text-transform: capitalize;
 }
 
-/* --- GRILLE --- */
+
 .skills-row {
     display: flex;
     flex-wrap: wrap;
@@ -357,10 +354,10 @@ body {
     justify-content: center;
 }
 
-/* --- CARTES STYLE GLASSMORPHISM --- */
+
 .skill-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px); /* Effet flou derrière la carte */
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     width: 140px;
     padding: 25px 15px;
@@ -392,12 +389,11 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* --- EFFETS AU SURVOL (HOVER) --- */
+
 .skill-card:hover {
     transform: translateY(-12px) scale(1.03);
     background: rgba(255, 255, 255, 0.12);
     border-color: var(--neon-blue);
-    /* Double lueur : bleue et rose */
     box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3), 
                 0 0 40px rgba(255, 0, 122, 0.1);
 }
@@ -407,7 +403,8 @@ body {
     filter: drop-shadow(0 0 8px var(--neon-blue));
 }
 
-/* --- ANIMATION D'APPARITION --- */
+
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -423,7 +420,8 @@ body {
     animation: fadeInUp 0.6s ease-out backwards;
 }
 
-/* --- RESPONSIVE --- */
+
+
 @media (max-width: 768px) {
     .skills-section {
         padding: 60px 5%;
@@ -451,7 +449,6 @@ body {
 
 
 
-/* --- VARIABLES --- */
 :root {
     --neon-blue: #00d4ff;
     --neon-pink: #ff007a;
@@ -461,7 +458,7 @@ body {
     --text-muted: #b0b0b0;
 }
 
-/* --- SECTION EXPÉRIENCES --- */
+
 .experiences-section {
     padding: 100px 10%;
     background: linear-gradient(135deg, #1a0b2e 0%, var(--deep-bg) 100%);
@@ -483,7 +480,8 @@ body {
     margin-top: 60px;
 }
 
-/* --- CARTES D'EXPÉRIENCE --- */
+
+
 .experience-card {
     background: var(--glass-card);
     backdrop-filter: blur(10px);
@@ -497,7 +495,8 @@ body {
     overflow: hidden;
 }
 
-/* Effet de ligne lumineuse en haut de la carte */
+
+
 .experience-card::before {
     content: '';
     position: absolute;
@@ -516,7 +515,8 @@ body {
     box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
 }
 
-/* --- ICONES --- */
+
+
 .experience-card .icon {
     width: 65px;
     height: 65px;
@@ -536,13 +536,14 @@ body {
     filter: drop-shadow(0 0 5px var(--neon-blue));
 }
 
-/* --- TEXTES --- */
+
+
 .experience-card h3 {
     font-size: 1.3rem;
     color: var(--neon-blue);
     margin-bottom: 15px;
     line-height: 1.4;
-    min-height: 3.6rem; /* Aligne les titres sur plusieurs lignes */
+    min-height: 3.6rem; 
     display: flex;
     align-items: center;
 }
@@ -554,7 +555,8 @@ body {
     margin: 0;
 }
 
-/* --- RESPONSIVE --- */
+
+
 @media (max-width: 768px) {
     .experiences-section {
         padding: 60px 5%;
@@ -573,7 +575,7 @@ body {
 
 
 
-/* --- PROJETS--- */
+
 
 :root {
     --cyber-blue: #00d4ff;
@@ -595,7 +597,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- GRILLE --- */
+
 .row-projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -604,7 +606,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- CARTE --- */
+
 .project-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -614,7 +616,8 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Bordure lumineuse supérieure */
+
+
 .project-card::before {
     content: "";
     position: absolute;
@@ -629,7 +632,8 @@ body {
 .border-blue::before { background: var(--cyber-blue); box-shadow: 0 0 15px var(--cyber-blue); }
 .border-pink::before { background: var(--cyber-pink); box-shadow: 0 0 15px var(--cyber-pink); }
 
-/* --- CONTENEUR IMAGE --- */
+
+
 .project-img-container {
     width: 100%;
     height: 180px;
@@ -642,15 +646,16 @@ body {
 .project-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'image remplit le cadre sans se déformer */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
 .project-card:hover img {
-    transform: scale(1.1); /* Petit zoom au survol */
+    transform: scale(1.1); 
 }
 
-/* --- TEXTE ET ENTÊTE --- */
+
+
 .card-header {
     display: flex;
     align-items: center;
@@ -680,7 +685,6 @@ body {
     margin: 0;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 900px) {
     .row-projects {
         grid-template-columns: 1fr;
@@ -693,11 +697,9 @@ body {
 
 
 
-/* --- SECTION CONTACT --- */
 #contact {
     padding: 100px 5%;
     background-color: #0b0b0b;
-    /* Motif nid d'abeille discret */
     background-image: linear-gradient(rgba(152, 45, 66, 0.85), rgba(0, 0, 0, 0.934)), 
                       url('image/background-hero.png');
     color: white;
@@ -725,7 +727,7 @@ body {
     gap: 15px;
 }
 
-/* --- LE CERCLE --- */
+
 .icon-circle {
     width: 90px;
     height: 90px;
@@ -735,18 +737,20 @@ body {
     justify-content: center;
     background: rgba(76, 35, 35, 0.02);
     transition: all 0.4s ease-in-out;
-    overflow: hidden; /* Pour que l'image ne dépasse pas */
+    overflow: hidden; 
 }
 
-/* --- L'IMAGE DANS LE CERCLE --- */
+
+
 .icon-circle img {
-    width: 45px; /* Taille de l'icône image */
+    width: 45px; 
     height: 45px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Rend l'image blanche si elle est noire */
+    filter: brightness(0) invert(1); 
 }
 
-/* --- COULEURS ET LUEURS --- */
+
+
 .border-blue .icon-circle {
     border: 3px solid #00d4ff;
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
@@ -757,7 +761,6 @@ body {
     box-shadow: 0 0 15px rgba(255, 0, 122, 0.3);
 }
 
-/* --- EFFETS HOVER --- */
 .contact-item:hover .icon-circle {
     transform: scale(1.1);
 }
@@ -785,7 +788,6 @@ body {
     color: #00d4ff;
 }
 
-/* --- MOBILE --- */
 @media (max-width: 850px) {
     .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
