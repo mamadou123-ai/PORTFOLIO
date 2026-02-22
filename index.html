@@ -13,7 +13,7 @@
     <nav>
         <ul class="nav-links">
             <li><a href="#presentation">PRESENTATION</a></li>
-            <li><a href="#formation" class="active">FORMATIONS</a></li>
+            <li><a href="#formation">FORMATIONS</a></li>
             <li><a href="#skills">HARD-SKILLS</a></li>
             <li><a href="#experiences">EXPERIENCES</a></li>
             <li><a href="#projets">PROJETS</a></li>
@@ -32,7 +32,7 @@
             <div class="scroll-indicator">⌄</div>
         </div>
         <div class="hero-image">
-            <img src="sarrniang.png" alt="Ma photo">
+            <img src="img/sarrniang.png" alt="Ma photo">
         </div>
 
     </div>
@@ -423,6 +423,30 @@
         }
     });
 </script>
+
+
+<script>
+window.addEventListener('scroll', () => {
+    let sections = document.querySelectorAll('section, div[id]'); 
+    let navLinks = document.querySelectorAll('.nav-links a');
+
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 150; 
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('.nav-links a[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+});
+</script>
+
+
 
 </body>
 </html>

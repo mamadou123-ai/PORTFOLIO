@@ -50,7 +50,7 @@ body {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #e74c3c;
+    background: #00d4ff;
     left: 0;
     bottom: -6px;
     transition: 0.3s;
@@ -63,9 +63,9 @@ body {
 
 .navbar.scrolled {
      background: linear-gradient(
-        rgba(196, 57, 57, 0.6),
-        rgba(202, 196, 196, 0.6)
-    ), url('image/background-hero.png') center/cover no-repeat;
+        rgba(215, 14, 14, 0.6),
+        rgba(17, 13, 13, 0.6)
+    ), url('img/background-hero.png') center/cover no-repeat;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
@@ -80,7 +80,7 @@ body {
     background: linear-gradient(
         rgba(0,0,0,0.6),
         rgba(0,0,0,0.6)
-    ), url('image/background-hero.png') center/cover no-repeat;
+    ), url('img/background-hero.png') center/cover no-repeat;
 
     display: flex;
     align-items: center;
@@ -847,4 +847,17 @@ body {
 @media (max-width: 550px) {
     .contact-grid { grid-template-columns: 1fr; }
     .form-row { flex-direction: column; }
+}
+
+
+
+
+
+
+.nav-links a.active::after {
+    width: 100%; 
+}
+
+.nav-links a.active {
+    color: #00d4ff; 
 }
