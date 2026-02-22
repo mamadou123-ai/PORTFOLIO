@@ -717,6 +717,7 @@ body {
     margin-bottom: 60px;
 }
 
+/* Grille de contact */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -732,7 +733,6 @@ body {
     gap: 15px;
 }
 
-
 .icon-circle {
     width: 90px;
     height: 90px;
@@ -745,8 +745,6 @@ body {
     overflow: hidden; 
 }
 
-
-
 .icon-circle img {
     width: 45px; 
     height: 45px;
@@ -754,8 +752,7 @@ body {
     filter: brightness(0) invert(1); 
 }
 
-
-
+/* Couleurs de bordures et Glow */
 .border-blue .icon-circle {
     border: 3px solid #00d4ff;
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
@@ -786,6 +783,66 @@ body {
     font-size: 1rem;
 }
 
+/* --- Styles du Formulaire (Nouveau) --- */
+.contact-form-container {
+    max-width: 800px;
+    margin: 80px auto 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00d4ff; /* Glow bleu au focus */
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.btn-submit {
+    align-self: center;
+    padding: 15px 40px;
+    background: transparent;
+    color: white;
+    border: 2px solid #ff007a; /* Rose néon */
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-submit:hover {
+    background: #ff007a;
+    box-shadow: 0 0 25px rgba(255, 0, 122, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Footer de section */
 .contact-name {
     margin-top: 60px;
     font-size: 1.2rem;
@@ -793,9 +850,16 @@ body {
     color: #00d4ff;
 }
 
+/* Media Queries Responsives */
 @media (max-width: 850px) {
     .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+@media (max-width: 650px) {
+    .form-row { flex-direction: column; }
+    .contact-form-container { padding: 20px; }
+}
+
 @media (max-width: 500px) {
     .contact-grid { grid-template-columns: 1fr; }
 }
