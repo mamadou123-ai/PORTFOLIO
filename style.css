@@ -63,7 +63,7 @@ body {
 
 .navbar.scrolled {
      background: linear-gradient(
-        rgba(173, 6, 6, 0.6),
+        rgba(196, 57, 57, 0.6),
         rgba(202, 196, 196, 0.6)
     ), url('image/background-hero.png') center/cover no-repeat;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -71,7 +71,7 @@ body {
 
 .navbar.scrolled .logo,
 .navbar.scrolled a {
-    color: #222;
+    color:white;
 }
 
 
@@ -705,7 +705,7 @@ body {
 #contact {
     padding: 100px 5%;
     background-color: #0b0b0b;
-    background-image: linear-gradient(rgba(152, 45, 66, 0.85), rgba(0, 0, 0, 0.934)), 
+    background-image: linear-gradient(rgba(152, 77, 93, 0.85), rgba(0, 0, 0, 0.934)), 
                       url('image/background-hero.png');
     color: white;
     text-align: center;
@@ -717,13 +717,28 @@ body {
     margin-bottom: 60px;
 }
 
-/* Grille de contact */
+.mont{
+    color: blue;
+}
+/* Conteneur pour alignement horizontal */
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Colonne Gauche : Infos */
+.contact-info {
+    flex: 1;
+}
+
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 20px;
-    max-width: 950px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour l'équilibre */
+    gap: 40px 20px;
 }
 
 .contact-item {
@@ -734,61 +749,32 @@ body {
 }
 
 .icon-circle {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(76, 35, 35, 0.02);
+    background: rgba(255, 255, 255, 0.05);
     transition: all 0.4s ease-in-out;
-    overflow: hidden; 
 }
 
 .icon-circle img {
-    width: 45px; 
-    height: 45px;
-    object-fit: contain;
-    filter: brightness(0) invert(1); 
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
 }
 
-/* Couleurs de bordures et Glow */
-.border-blue .icon-circle {
-    border: 3px solid #00d4ff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
-}
+.border-blue .icon-circle { border: 3px solid #00d4ff; box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
+.border-pink .icon-circle { border: 3px solid #ff007a; box-shadow: 0 0 15px rgba(233, 231, 232, 0.3); }
 
-.border-pink .icon-circle {
-    border: 3px solid #ff007a;
-    box-shadow: 0 0 15px rgba(255, 0, 122, 0.3);
-}
+.contact-item:hover .icon-circle { transform: scale(1.1); }
 
-.contact-item:hover .icon-circle {
-    transform: scale(1.1);
-}
-
-.border-blue:hover .icon-circle {
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
-    background: rgba(0, 212, 255, 0.1);
-}
-
-.border-pink:hover .icon-circle {
-    box-shadow: 0 0 30px rgba(255, 0, 122, 0.6);
-    background: rgba(255, 0, 122, 0.1);
-}
-
-.contact-item span, .contact-item a {
-    color: #efefef;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* --- Styles du Formulaire (Nouveau) --- */
+/* Colonne Droite : Formulaire */
 .contact-form-container {
-    max-width: 800px;
-    margin: 80px auto 0 auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.02);
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 35px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -808,58 +794,57 @@ body {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: white;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
     outline: none;
-    border-color: #00d4ff; /* Glow bleu au focus */
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 .btn-submit {
-    align-self: center;
-    padding: 15px 40px;
+    padding: 15px 35px;
     background: transparent;
     color: white;
-    border: 2px solid #ff007a; /* Rose néon */
-    border-radius: 50px;
+    border: 2px solid green;
+    border-radius: 30px;
     font-weight: bold;
-    letter-spacing: 2px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: 0.4s;
+    letter-spacing: 1px;
 }
 
 .btn-submit:hover {
-    background: #ff007a;
-    box-shadow: 0 0 25px rgba(255, 0, 122, 0.6);
-    transform: translateY(-5px);
+    background:green;
+    box-shadow: 0 0 30px green;
+    transform: translateY(-3px);
 }
 
-/* Footer de section */
 .contact-name {
-    margin-top: 60px;
+    margin-top: 80px;
     font-size: 1.2rem;
-    letter-spacing: 2px;
     color: #00d4ff;
+    letter-spacing: 3px;
 }
 
-/* Media Queries Responsives */
-@media (max-width: 850px) {
-    .contact-grid { grid-template-columns: repeat(2, 1fr); }
+/* RESPONSIVE : Aligner verticalement sur mobile */
+@media (max-width: 950px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info { width: 100%; margin-bottom: 50px; }
+    .contact-form-container { width: 100%; }
 }
 
-@media (max-width: 650px) {
-    .form-row { flex-direction: column; }
-    .contact-form-container { padding: 20px; }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .contact-grid { grid-template-columns: 1fr; }
+    .form-row { flex-direction: column; }
 }
