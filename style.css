@@ -62,7 +62,10 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgb(226, 184, 184);
+     background: linear-gradient(
+        rgba(173, 6, 6, 0.6),
+        rgba(202, 196, 196, 0.6)
+    ), url('image/background-hero.png') center/cover no-repeat;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
@@ -148,8 +151,8 @@ body {
 
 .section {
     padding: 120px 60px;
-    background: #fff;
-    color: #111;
+    background: #ffffff;
+    color: #f1ebeb;
     min-height: 80vh;
 }
 
@@ -173,7 +176,9 @@ body {
 
 
 #formation {
-    background-color: #f8f9fa; 
+ background: radial-gradient(circle at top right, #3d0b5e, transparent),
+                radial-gradient(circle at bottom left, #0b2e4d, transparent),
+                linear-gradient(135deg, var(--deep-purple) 0%, #0f051d 100%);
     padding: 80px 0;
 }
 
