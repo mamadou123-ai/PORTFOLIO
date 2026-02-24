@@ -63,8 +63,8 @@ body {
 
 .navbar.scrolled {
      background: linear-gradient(
-        rgba(215, 14, 14, 0.6),
-        rgba(17, 13, 13, 0.6)
+        rgba(108, 39, 39, 0.6),
+        rgba(75, 46, 46, 0.6)
     ), url('img/background-hero.png') center/cover no-repeat;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -705,8 +705,8 @@ body {
 #contact {
     padding: 100px 5%;
     background-color: #0b0b0b;
-    background-image: linear-gradient(rgba(152, 77, 93, 0.85), rgba(0, 0, 0, 0.934)), 
-                      url('image/background-hero.png');
+    background-image: linear-gradient(rgba(189, 73, 98, 0.85), rgba(0, 0, 0, 0.934)), 
+                      url('img/background-hero.png');
     color: white;
     text-align: center;
 }
