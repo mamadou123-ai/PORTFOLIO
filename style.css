@@ -871,7 +871,6 @@ body {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    background-color: #007bff;
 }
 
 /* MODE MOBILE */
@@ -887,7 +886,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: white;
+        background: rgb(9, 35, 203);
         width: 100%;
         text-align: center;
         margin-top: 10px;
