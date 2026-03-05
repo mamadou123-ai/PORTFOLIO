@@ -23,6 +23,8 @@ body {
     z-index: 1000;
     transition: all 0.4s ease;
     background: transparent;
+    backdrop-filter: blur(10px);
+
 }
 
 .logo {
