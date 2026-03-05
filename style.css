@@ -918,8 +918,11 @@ body{
 
     width:100%;
 
-    background:#0b2bd6;
-
+background: linear-gradient(
+        rgba(108, 39, 39, 0.6),
+        rgba(75, 46, 46, 0.6)
+    ), url('img/background-hero.png') center/cover no-repeat;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     padding:20px 0;
 }
 
