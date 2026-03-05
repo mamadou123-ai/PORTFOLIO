@@ -910,38 +910,41 @@ body{
 
 /* menu caché */
 .nav-links{
-    display:none;
+    display:flex;
     flex-direction:column;
-    position:absolute;
-    top:60px;
-    left:0;
 
-    width:100%;
+    position:fixed;
+    top:0;
+    right:-260px;   /* caché hors écran */
 
-background: linear-gradient(
-        rgba(108, 39, 39, 0.6),
-        rgba(17, 16, 16, 0.6)
-    ), url('img/background-hero.png') center/cover no-repeat;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    padding:20px 0;
+    width:260px;
+    height:100vh;
+
+    background: linear-gradient(
+        rgba(108, 39, 39, 0.95),
+        rgba(75, 46, 46, 0.95)
+    );
+    padding-top:90px;
+    transition:0.4s;
 }
 
 /* menu visible */
 .nav-links.active{
-    display:flex;
+    right:0;
 }
 
-/* style des liens */
+
 .nav-links li{
-    text-align:center;
-    padding:15px;
+    padding:20px;
+    text-align:left;
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .nav-links a{
     font-size:18px;
     color:white;
-    text-decoration:none;
 }
+
 
 }
 
