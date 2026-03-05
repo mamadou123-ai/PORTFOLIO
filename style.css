@@ -101,10 +101,9 @@ body {
 .hero-content{
     width: 55%;
 }
-.hero-content h1{
-    font-size:22px;
-    line-height:1.4;
-    word-break: break-word;
+
+.hero-content span{
+color:#00d4ff;
 }
 
 .hero h1{
@@ -946,13 +945,6 @@ background: linear-gradient(
     font-size:18px;
     color:white;
     text-decoration:none;
-}
-
-}
-@media screen and (max-width:480px){
-
-.hero-content h1{
-    font-size:20px;
 }
 
 }
