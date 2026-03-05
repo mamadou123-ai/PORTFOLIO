@@ -920,7 +920,10 @@ body{
     width:200px;
     height:auto;
 
-    background: rgba(20,20,20,0.95);
+background: linear-gradient(
+        rgba(108, 39, 39, 0.6),
+        rgba(75, 46, 46, 0.6)
+    ), url('img/background-hero.png') center/cover no-repeat;
     backdrop-filter: blur(10px);
 
     border-radius:0 12px 12px 0;
