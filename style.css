@@ -915,7 +915,7 @@ body{
 
     position:fixed;
     top:0;
-    right:-260px;   /* caché hors écran */
+    left:-260px;   /* caché hors écran à gauche */
 
     width:260px;
     height:100vh;
@@ -924,14 +924,16 @@ body{
         rgba(108, 39, 39, 0.95),
         rgba(75, 46, 46, 0.95)
     );
+
     padding-top:90px;
     transition:0.4s;
 }
 
 /* menu visible */
 .nav-links.active{
-    right:0;
+    left:0;
 }
+
 
 
 .nav-links li{
