@@ -17,21 +17,24 @@
 <body>
 
 <header class="navbar" id="navbar">
-    <div class="logo">MSN</div>
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+    <nav class="navbar">
 
-    <nav>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#presentation">PRESENTATION</a></li>
-            <li><a href="#formation">FORMATIONS</a></li>
-            <li><a href="#skills">HARD-SKILLS</a></li>
-            <li><a href="#experiences">EXPERIENCES</a></li>
-            <li><a href="#projets">PROJETS</a></li>
-            <li><a href="#contact">CONTACTS</a></li>
-        </ul>
-    </nav>
+<h2 class="logo">MSN</h2>
+
+<div class="menu-toggle">
+☰
+</div>
+
+<ul class="nav-links">
+<li><a href="#presentation">Présentation</a></li>
+<li><a href="#skills">Hard-Skills</a></li>
+<li><a href="#experiences">Expériences</a></li>
+<li><a href="#projets">Projets</a></li>
+<li><a href="#contact">Contacts</a></li>
+</ul>
+
+</nav>
+
 </header>
 
 
@@ -484,12 +487,13 @@ window.addEventListener('scroll', () => {
 
 
 <script>
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
 
-toggle.addEventListener("click", () => {
+menu.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
+
 </script>
 
 
